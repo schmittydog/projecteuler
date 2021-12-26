@@ -45,6 +45,20 @@ func GetPrimeFactors(n int) []int {
 	return factors
 }
 
+func GetPrimeTups(n int) [][]int {
+	primes := GetPrimeFactors(n)
+	ret := [][]int
+	for _, prime := range primes {
+		pcount := 0
+		for n%prime == 0 {
+			pcount += 1
+			n /= prime
+		}
+		ret = append(ret, []int{prime, pcount})
+	}
+	return ret
+}
+
 func PowMod(a, b, p int) int {
 	a %= p
 	if a == 0 {
