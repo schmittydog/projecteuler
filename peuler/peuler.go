@@ -2,6 +2,8 @@
 package peuler
 
 import (
+	"io/ioutil"
+	"os"
 	"math/big"
 
 	"github.com/schmittydog/projecteuler/bitsieve"
@@ -12,6 +14,13 @@ var (
 	Primes []int
 	N      int
 )
+
+func GetFile(fname string) string {
+	f, _ := os.Open(fname)
+	defer f.Close()
+	b, _ := ioutil.ReadAll(f)
+	return string(b[:len(b)-1])
+}
 
 func PrimesTo(n int) {
 	BS = bitsieve.NewBitSieve(n)
