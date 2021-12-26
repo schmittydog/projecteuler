@@ -4,4 +4,4 @@ go 1.17
 
 require github.com/schmittydog/projecteuler/peuler v0.0.0-20211226045951-4de2abf19402
 
-require github.com/schmittydog/projecteuler/bitsieve v0.0.0-20211226045951-4de2abf19402 // indirect
+require github.com/schmittydog/projecteuler/bitsieve v0.0.0-20211226024034-f36eb2087b87 // indirect

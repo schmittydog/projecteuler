@@ -1,6 +1,4 @@
 github.com/schmittydog/projecteuler/bitsieve v0.0.0-20211226024034-f36eb2087b87 h1:CxQzg/xxSLb4yhXgfQNnni+AYbMGd5u+TGG+CzEdt8E=
 github.com/schmittydog/projecteuler/bitsieve v0.0.0-20211226024034-f36eb2087b87/go.mod h1:0MQtG8ozBe76msGdMsihLXR1EFe/S+dN/YXGomzavTY=
-github.com/schmittydog/projecteuler/bitsieve v0.0.0-20211226045951-4de2abf19402 h1:VHAHLUHB0yvSss7+hSZ8NVmvV92UKhkZAMRkwa7/KZ4=
-github.com/schmittydog/projecteuler/bitsieve v0.0.0-20211226045951-4de2abf19402/go.mod h1:0MQtG8ozBe76msGdMsihLXR1EFe/S+dN/YXGomzavTY=
 github.com/schmittydog/projecteuler/peuler v0.0.0-20211226045951-4de2abf19402 h1:YSAhWHoe5SxSgHCv52SlhImF1kylBqPOwQ4N27VQOAs=
 github.com/schmittydog/projecteuler/peuler v0.0.0-20211226045951-4de2abf19402/go.mod h1:AleMCbZ1jzJSHvCIRwZkhrMHjGEZ8JC2AVC2u/B5Fww=
