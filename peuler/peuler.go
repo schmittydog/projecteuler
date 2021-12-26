@@ -47,7 +47,7 @@ func GetPrimeFactors(n int) []int {
 
 func GetPrimeTups(n int) [][]int {
 	primes := GetPrimeFactors(n)
-	ret := [][]int
+	ret := [][]int{}
 	for _, prime := range primes {
 		pcount := 0
 		for n%prime == 0 {
