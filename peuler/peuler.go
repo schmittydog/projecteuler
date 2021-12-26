@@ -9,11 +9,13 @@ import (
 var (
 	BS     *bitsieve.BitSieve
 	Primes []int
+	N      int
 )
 
 func PrimesTo(n int) {
 	BS = bitsieve.NewBitSieve(n)
 	Primes = BS.GetArray(n)
+	N = n
 }
 
 func IsPrime(n int) bool {
