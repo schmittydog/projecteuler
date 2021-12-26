@@ -1,3 +1,4 @@
+//General Utilities for Project Euler
 package peuler
 
 import (
