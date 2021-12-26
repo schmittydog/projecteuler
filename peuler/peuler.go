@@ -19,7 +19,7 @@ func GetFile(fname string) string {
 	f, _ := os.Open(fname)
 	defer f.Close()
 	b, _ := ioutil.ReadAll(f)
-	return string(b[:len(b)-1])
+	return string(b)
 }
 
 func PrimesTo(n int) {
