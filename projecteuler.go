@@ -1,7 +1,6 @@
 package projecteuler
 
 import (
-	"fmt"
 	"log"
 	"math"
 	"sort"
