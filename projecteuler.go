@@ -7,8 +7,6 @@ import (
 )
 
 var N = 100000000
-var sqrt int
-var sieve []int16
 
 func Pow(x, y int) int {
 	n := 1
@@ -43,8 +41,8 @@ func Factors(n int) []int {
 		log.Printf("Increasing sieve to %d", n*2)
 		InitSieve(n * 2)
 	}
-	if n == 0 {
-		panic("Can't factor 0 you idiot")
+	if n < 2 {
+		panic("Can't factor < 2")
 	}
 	ret := []int{}
 
