@@ -6,13 +6,21 @@ import (
 	"sort"
 )
 
-var N = 10000000 
+var N = 100000000
 var sqrt int
 var sieve []int16
 
 func Pow(x, y int) int {
-	f := math.Pow(float64(x), float64(y))
-	return int(f)
+	n := 1
+	ret := 1
+	for n <= y {
+		if n&y != 0 {
+			ret *= x
+		}
+		x *= x
+		n *= 2
+	}
+	return ret
 }
 
 func PowMod(x, y, mod int) int {
@@ -31,9 +39,9 @@ func PowMod(x, y, mod int) int {
 }
 
 func Factors(n int) []int {
-	if n > N {
+	if n > 2*N {
 		log.Printf("Increasing sieve to %d", n*2)
-		InitSieve(n*2)
+		InitSieve(n * 2)
 	}
 	if n == 0 {
 		panic("Can't factor 0 you idiot")
@@ -96,14 +104,15 @@ func divisorHelper(facTups [][]int, n int) []int {
 
 func Totient(n int) int {
 	for _, f := range FactorTups(n) {
-		n *= f[0]-1
+		n *= f[0] - 1
 		n /= f[0]
 	}
 	return n
 }
 
 func InitSieve(n int) {
-	N = n / 2 // Doing an odd number sieve, so make 1/2 size
+	// Doing an odd number sieve, so make 1/2 size
+	N = (n + 1) / 2
 	sqrt = int(math.Sqrt(float64(N)))
 	sieve = make([]int16, N)
 	for i := 1; i <= sqrt; i++ {
